@@ -40,15 +40,18 @@ public class Main {
             default:
                 System.out.println("На столько календарь не рассчитан");
         }
-        //4th Тут я не понял, нужно ли создавать алгоритм для срока доствки
-        // потому что в условиях задачи сказано выводить в консоль следующее "потребуется дней" + срок доставки
+        //4th Переделал
+
         int deliveryDistance = 95;
+        int deliveryDaysUnder20Km = 1;
+        int deliveryDaysOver20Km = deliveryDaysUnder20Km + 1;
+        int deliveryDaysOver60Km = deliveryDaysOver20Km + 1;
         if (deliveryDistance == 20) {
-            System.out.println("Доставка займет одни сутки");
+            System.out.println("Потребуется дней " +deliveryDaysUnder20Km);
         } else if (deliveryDistance >= 20 && deliveryDistance <= 60) {
-            System.out.println("Доставка займет двое суток");
+            System.out.println("Потребуется дней " +deliveryDaysOver20Km);
         } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
-            System.out.println("Доставка займет трое суток");
+            System.out.println("Потребуется дней " +deliveryDaysOver60Km);
         }
 
         //5th
